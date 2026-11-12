@@ -1,0 +1,56 @@
+[dataset_stats]
+           split  n_samples  label_norm  label_anom
+           train      20712       12870        7842
+            test      10355        6434        3921
+lexical_ood_test       1106        1000         106
+
+
+======================================================================
+ TASK: binary  (label=label, features=combined)
+======================================================================
+Feature extraction: 3013 dims (fit in 3.00s)
+  LogisticRegression acc=0.9976  f1_macro=0.9974  roc_auc=1.0  fit=0.50s  latency=0.0001ms/sample
+  MultinomialNB      acc=0.9959  f1_macro=0.9957  roc_auc=0.9999  fit=0.01s  latency=0.0003ms/sample
+  LinearSVM          acc=0.9996  f1_macro=0.9996  roc_auc=1.0  fit=1.87s  latency=0.0006ms/sample
+  RandomForest       acc=0.9997  f1_macro=0.9997  roc_auc=1.0  fit=3.36s  latency=0.0210ms/sample
+  XGBoost            acc=0.9995  f1_macro=0.9995  roc_auc=1.0  fit=20.78s  latency=0.0027ms/sample
+  MLP                acc=0.9990  f1_macro=0.9990  roc_auc=1.0  fit=9.84s  latency=0.0042ms/sample
+
+--- OOD evaluation on 'lexical_ood' (models trained for binary) ---
+  RandomForest       OOD acc=0.5208  f1_macro=0.4567
+  LinearSVM          OOD acc=0.2269  f1_macro=0.2252
+  XGBoost            OOD acc=0.7360  f1_macro=0.6139
+  MLP                OOD acc=0.2025  f1_macro=0.2022
+  LogisticRegression OOD acc=0.2233  f1_macro=0.2217
+  MultinomialNB      OOD acc=0.1971  f1_macro=0.1968
+
+======================================================================
+ TASK: multiclass  (label=attack_type, features=combined)
+======================================================================
+Feature extraction: 3013 dims (fit in 3.10s)
+  LogisticRegression acc=0.9976  f1_macro=0.9662  roc_auc=1.0  fit=10.67s  latency=0.0004ms/sample
+  MultinomialNB      acc=0.9944  f1_macro=0.8068  roc_auc=0.9769  fit=0.01s  latency=0.0004ms/sample
+  LinearSVM          acc=0.9992  f1_macro=0.9823  roc_auc=1.0  fit=14.77s  latency=0.0016ms/sample
+  RandomForest       acc=0.9994  f1_macro=0.9956  roc_auc=1.0  fit=3.90s  latency=0.0212ms/sample
+  XGBoost            acc=0.9991  f1_macro=0.9754  roc_auc=1.0  fit=57.52s  latency=0.0107ms/sample
+  MLP                acc=0.9992  f1_macro=0.9875  roc_auc=1.0  fit=15.34s  latency=0.0046ms/sample
+
+======================================================================
+ FEATURE ABLATION (binary task)
+======================================================================
+  mode=tfidf      model=RandomForest   dims= 3000 acc=0.9992 f1_macro=0.9992
+  mode=tfidf      model=XGBoost        dims= 3000 acc=0.9988 f1_macro=0.9988
+  mode=engineered model=RandomForest   dims=   13 acc=0.9985 f1_macro=0.9984
+  mode=engineered model=XGBoost        dims=   13 acc=0.9983 f1_macro=0.9982
+  mode=combined   model=RandomForest   dims= 3013 acc=0.9997 f1_macro=0.9997
+  mode=combined   model=XGBoost        dims= 3013 acc=0.9993 f1_macro=0.9993
+
+======================================================================
+ 5-FOLD CROSS-VALIDATION on training set (XGBoost, binary task)
+======================================================================
+  Fold F1-macro scores: [0.999, 0.9997, 0.9997, 0.9992, 0.9997]
+  Mean: 0.9995  Std: 0.0003
+
+All experiments completed in 4.66 minutes.
+Best binary model: RandomForest
+Best multiclass model: RandomForest

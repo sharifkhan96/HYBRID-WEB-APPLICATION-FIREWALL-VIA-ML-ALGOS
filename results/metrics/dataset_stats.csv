@@ -1,0 +1,4 @@
+split,n_samples,label_norm,label_anom
+train,20712,12870,7842
+test,10355,6434,3921
+lexical_ood_test,1106,1000,106

@@ -1,0 +1,100 @@
+
+======================================================================
+in_distribution_test: 3921 malicious payloads
+======================================================================
+  LogisticRegression   case_randomization     evasion_rate=0.000  (n_caught_before=3897)
+  LogisticRegression   whitespace_insertion   evasion_rate=0.000  (n_caught_before=3897)
+  LogisticRegression   url_encoding           evasion_rate=0.002  (n_caught_before=3897)
+  LogisticRegression   comment_injection      evasion_rate=0.000  (n_caught_before=3897)
+  LogisticRegression   padding_dilution       evasion_rate=0.000  (n_caught_before=3897)
+  LogisticRegression   combined               evasion_rate=0.001  (n_caught_before=3897)
+  MultinomialNB        case_randomization     evasion_rate=0.000  (n_caught_before=3879)
+  MultinomialNB        whitespace_insertion   evasion_rate=0.000  (n_caught_before=3879)
+  MultinomialNB        url_encoding           evasion_rate=0.002  (n_caught_before=3879)
+  MultinomialNB        comment_injection      evasion_rate=0.001  (n_caught_before=3879)
+  MultinomialNB        padding_dilution       evasion_rate=0.000  (n_caught_before=3879)
+  MultinomialNB        combined               evasion_rate=0.000  (n_caught_before=3879)
+  LinearSVM            case_randomization     evasion_rate=0.000  (n_caught_before=3918)
+  LinearSVM            whitespace_insertion   evasion_rate=0.000  (n_caught_before=3918)
+  LinearSVM            url_encoding           evasion_rate=0.000  (n_caught_before=3918)
+  LinearSVM            comment_injection      evasion_rate=0.000  (n_caught_before=3918)
+  LinearSVM            padding_dilution       evasion_rate=0.000  (n_caught_before=3918)
+  LinearSVM            combined               evasion_rate=0.001  (n_caught_before=3918)
+  RandomForest         case_randomization     evasion_rate=0.000  (n_caught_before=3918)
+  RandomForest         whitespace_insertion   evasion_rate=0.000  (n_caught_before=3918)
+  RandomForest         url_encoding           evasion_rate=0.001  (n_caught_before=3918)
+  RandomForest         comment_injection      evasion_rate=0.000  (n_caught_before=3918)
+  RandomForest         padding_dilution       evasion_rate=0.022  (n_caught_before=3918)
+  RandomForest         combined               evasion_rate=0.000  (n_caught_before=3918)
+  XGBoost              case_randomization     evasion_rate=0.000  (n_caught_before=3919)
+  XGBoost              whitespace_insertion   evasion_rate=0.000  (n_caught_before=3919)
+  XGBoost              url_encoding           evasion_rate=0.000  (n_caught_before=3919)
+  XGBoost              comment_injection      evasion_rate=0.000  (n_caught_before=3919)
+  XGBoost              padding_dilution       evasion_rate=0.043  (n_caught_before=3919)
+  XGBoost              combined               evasion_rate=0.000  (n_caught_before=3919)
+  MLP                  case_randomization     evasion_rate=0.000  (n_caught_before=3912)
+  MLP                  whitespace_insertion   evasion_rate=0.000  (n_caught_before=3912)
+  MLP                  url_encoding           evasion_rate=0.001  (n_caught_before=3912)
+  MLP                  comment_injection      evasion_rate=0.000  (n_caught_before=3912)
+  MLP                  padding_dilution       evasion_rate=0.000  (n_caught_before=3912)
+  MLP                  combined               evasion_rate=0.000  (n_caught_before=3912)
+
+======================================================================
+ood_lexical_test: 106 malicious payloads
+======================================================================
+  LogisticRegression   case_randomization     evasion_rate=0.000  (n_caught_before=98)
+  LogisticRegression   whitespace_insertion   evasion_rate=0.000  (n_caught_before=98)
+  LogisticRegression   url_encoding           evasion_rate=0.000  (n_caught_before=98)
+  LogisticRegression   comment_injection      evasion_rate=0.000  (n_caught_before=98)
+  LogisticRegression   padding_dilution       evasion_rate=0.000  (n_caught_before=98)
+  LogisticRegression   combined               evasion_rate=0.000  (n_caught_before=98)
+  MultinomialNB        case_randomization     evasion_rate=0.000  (n_caught_before=99)
+  MultinomialNB        whitespace_insertion   evasion_rate=0.000  (n_caught_before=99)
+  MultinomialNB        url_encoding           evasion_rate=0.000  (n_caught_before=99)
+  MultinomialNB        comment_injection      evasion_rate=0.000  (n_caught_before=99)
+  MultinomialNB        padding_dilution       evasion_rate=0.000  (n_caught_before=99)
+  MultinomialNB        combined               evasion_rate=0.000  (n_caught_before=99)
+  LinearSVM            case_randomization     evasion_rate=0.000  (n_caught_before=99)
+  LinearSVM            whitespace_insertion   evasion_rate=0.000  (n_caught_before=99)
+  LinearSVM            url_encoding           evasion_rate=0.000  (n_caught_before=99)
+  LinearSVM            comment_injection      evasion_rate=0.000  (n_caught_before=99)
+  LinearSVM            padding_dilution       evasion_rate=0.000  (n_caught_before=99)
+  LinearSVM            combined               evasion_rate=0.000  (n_caught_before=99)
+  RandomForest         case_randomization     evasion_rate=0.000  (n_caught_before=98)
+  RandomForest         whitespace_insertion   evasion_rate=0.000  (n_caught_before=98)
+  RandomForest         url_encoding           evasion_rate=0.000  (n_caught_before=98)
+  RandomForest         comment_injection      evasion_rate=0.000  (n_caught_before=98)
+  RandomForest         padding_dilution       evasion_rate=0.051  (n_caught_before=98)
+  RandomForest         combined               evasion_rate=0.000  (n_caught_before=98)
+  XGBoost              case_randomization     evasion_rate=0.000  (n_caught_before=96)
+  XGBoost              whitespace_insertion   evasion_rate=0.000  (n_caught_before=96)
+  XGBoost              url_encoding           evasion_rate=0.000  (n_caught_before=96)
+  XGBoost              comment_injection      evasion_rate=0.000  (n_caught_before=96)
+  XGBoost              padding_dilution       evasion_rate=0.031  (n_caught_before=96)
+  XGBoost              combined               evasion_rate=0.000  (n_caught_before=96)
+  MLP                  case_randomization     evasion_rate=0.010  (n_caught_before=100)
+  MLP                  whitespace_insertion   evasion_rate=0.000  (n_caught_before=100)
+  MLP                  url_encoding           evasion_rate=0.000  (n_caught_before=100)
+  MLP                  comment_injection      evasion_rate=0.000  (n_caught_before=100)
+  MLP                  padding_dilution       evasion_rate=0.000  (n_caught_before=100)
+  MLP                  combined               evasion_rate=0.000  (n_caught_before=100)
+
+Total elapsed: 1.5 min
+
+=== Mean evasion rate per transform (across models, in-distribution) ===
+transform
+padding_dilution        0.010846
+url_encoding            0.000770
+combined                0.000256
+comment_injection       0.000086
+case_randomization      0.000086
+whitespace_insertion    0.000000
+
+=== Mean evasion rate per model (across transforms, in-distribution) ===
+model
+XGBoost               0.007145
+RandomForest          0.003786
+LogisticRegression    0.000428
+MultinomialNB         0.000387
+MLP                   0.000170
+LinearSVM             0.000128

@@ -1,0 +1,6 @@
+attack_type,count
+norm,12870
+sqli,7235
+xss,355
+path-traversal,193
+cmdi,59

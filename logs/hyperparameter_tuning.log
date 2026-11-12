@@ -1,0 +1,60 @@
+Feature matrix: 3013 dims
+
+======================================================================
+Tuning LogisticRegression (20 candidates x 3-fold CV)
+======================================================================
+  Best CV macro-F1: 0.9992  (6.9s)
+  Best params: {'C': 19.485110376829184, 'penalty': 'l2', 'solver': 'lbfgs'}
+  ID:  untuned acc=0.9976 f1=0.9974  ->  tuned acc=0.9995 f1=0.9995
+  OOD: tuned acc=0.2215 f1=0.2201
+
+======================================================================
+Tuning MultinomialNB (20 candidates x 3-fold CV)
+======================================================================
+  Best CV macro-F1: 0.9988  (0.4s)
+  Best params: {'alpha': 0.0025575316820286567, 'fit_prior': False}
+  ID:  untuned acc=0.9959 f1=0.9957  ->  tuned acc=0.9988 f1=0.9988
+  OOD: tuned acc=0.1808 f1=0.1808
+
+======================================================================
+Tuning LinearSVM (20 candidates x 3-fold CV)
+======================================================================
+  Best CV macro-F1: 0.9996  (23.2s)
+  Best params: {'estimator__C': 3.746401188473625}
+  ID:  untuned acc=0.9996 f1=0.9996  ->  tuned acc=0.9997 f1=0.9997
+  OOD: tuned acc=0.2224 f1=0.2210
+
+======================================================================
+Tuning RandomForest (20 candidates x 3-fold CV)
+======================================================================
+  Best CV macro-F1: 0.9993  (683.8s)
+  Best params: {'max_depth': 60, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'n_estimators': 158}
+  ID:  untuned acc=0.9997 f1=0.9997  ->  tuned acc=0.9998 f1=0.9998
+  OOD: tuned acc=0.5208 f1=0.4567
+
+======================================================================
+Tuning XGBoost (20 candidates x 3-fold CV)
+======================================================================
+  Best CV macro-F1: 0.9995  (270.8s)
+  Best params: {'colsample_bytree': 0.6260206371941118, 'learning_rate': 0.29466566117599996, 'max_depth': 4, 'n_estimators': 364, 'subsample': 0.6063865008880857}
+  ID:  untuned acc=0.9995 f1=0.9995  ->  tuned acc=0.9992 f1=0.9992
+  OOD: tuned acc=0.7405 f1=0.6141
+
+======================================================================
+Tuning MLP (20 candidates x 3-fold CV)
+======================================================================
+  Best CV macro-F1: 0.9996  (169.5s)
+  Best params: {'alpha': 0.001969828624191452, 'hidden_layer_sizes': (32,), 'learning_rate_init': 0.009711720243493491, 'max_iter': 150}
+  ID:  untuned acc=0.9990 f1=0.9990  ->  tuned acc=0.9994 f1=0.9994
+  OOD: tuned acc=0.1754 f1=0.1754
+
+Total elapsed: 19.3 min
+
+=== Summary (sorted by tuned OOD accuracy) ===
+             model  untuned_id_acc  tuned_id_acc  untuned_ood_acc  tuned_ood_acc
+           XGBoost        0.999517      0.999227         0.735986       0.740506
+      RandomForest        0.999710      0.999807         0.520796       0.520796
+         LinearSVM        0.999614      0.999710         0.226944       0.222423
+LogisticRegression        0.997586      0.999517         0.223327       0.221519
+     MultinomialNB        0.995944      0.998841         0.197107       0.180832
+               MLP        0.999034      0.999421         0.202532       0.175407

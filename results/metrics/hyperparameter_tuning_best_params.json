@@ -1,0 +1,35 @@
+{
+  "LogisticRegression": {
+    "C": 19.485110376829184,
+    "penalty": "l2",
+    "solver": "lbfgs"
+  },
+  "MultinomialNB": {
+    "alpha": 0.0025575316820286567,
+    "fit_prior": false
+  },
+  "LinearSVM": {
+    "estimator__C": 3.746401188473625
+  },
+  "RandomForest": {
+    "max_depth": 60,
+    "max_features": "sqrt",
+    "min_samples_leaf": 1,
+    "n_estimators": 158
+  },
+  "XGBoost": {
+    "colsample_bytree": 0.6260206371941118,
+    "learning_rate": 0.29466566117599996,
+    "max_depth": 4,
+    "n_estimators": 364,
+    "subsample": 0.6063865008880857
+  },
+  "MLP": {
+    "alpha": 0.001969828624191452,
+    "hidden_layer_sizes": [
+      32
+    ],
+    "learning_rate_init": 0.009711720243493491,
+    "max_iter": 150
+  }
+}
